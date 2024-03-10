@@ -1,0 +1,228 @@
+@media(max-width: 1250px){
+    .header__fixed { 
+        padding: 50px 10px 43px 10px;   /* потрібно вказати усі падінги, оскільки, якщо вказати тільки padding-right і padding-left, ми перебємо падінги вказані спочатку, тому потрібно зберігати і доповнювати */
+    }
+    .hero-inner-wrapper {
+        padding: 93px 10px 33px 10px;
+        background-size: auto;
+    }
+    .service {
+        padding: 141px 10px 166px 10px;
+    }
+    .wrapper.vegetable-inner-wrapper {
+        padding: 89px 10px 143px 10px;
+    }
+    .customers {
+        padding: 96px 10px 150px 10px;
+    }
+    .customer-title {
+        font-size: 60px;
+        line-height: 80px;
+    }
+    .app {
+        padding: 0 10px 140px;
+    }
+    .app-wrapper {
+        padding: 0 50px;
+    }
+    .footer {
+        padding: 67px 10px 118px;
+    }
+}
+
+@media(max-width: 980px){
+    .hero-wrapper{
+        flex-wrap: wrap; /* для того, щоб елементи переходили на нову строку */
+        justify-content: center;
+        gap: 30px;
+    }
+    .hero-list {
+        display: flex; /* для того, щоб елементи стали в стрічку */
+        justify-content: center;
+        flex-wrap: wrap;
+        flex: 1;
+        gap: 10px;
+    }
+    .hero-item:not(:last-child) {
+        margin-bottom: 0;
+    }
+    .hero-img{
+        width: 100%;
+    }
+    .customer-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    .app-wrapper {
+        padding: 0;
+        flex-direction: column-reverse; /* ставимо елементи в колонку, задом наперед */
+    }
+    .footer-block {
+        width: 48%; /* якщо поставити 50%, то в рядку буде лише по одному елементу */
+    }
+}
+
+@media(max-width: 850px){  /* виносимо меню вниз, робимо анімацію */
+    .nav {
+        position: absolute; /* елемент видаляється зі звичайного потоку документа, і його позиція обчислюється відносно його найближчого позиційованого предка */
+        z-index: 2;  /* так, як є бекграунд знаходиться в position: absolute, потрібно прописувати  z-index:. це CSS-властивість, яка визначає порядок накладання елементів на сторінці в просторі z-осі (осі глибини). Значення z-index вказує на "висоту" елемента в контексті з-осі.  */
+        background: var(--bg-white);
+        left: -50%;
+        right: 100%; /* скриваємо меню */
+        bottom: 0;
+        top: 120px;
+        height: 100vh; /* для того, щоб він завжди розтягувався по усій висоті */
+        overflow-x: hidden; /* тому, що нам треба ховати вліво меню і по кліку воно буде виїзжати */
+        border-top: 1px solid var(--btn-border); /* додаємо полоску над меню */
+
+        transition: 0.3s linear; /* linear - щоб було плавно */
+        -webkit-transition: 0.3s linear;
+        -moz-transition: 0.3s linear;
+        -ms-transition: 0.3s linear;
+        -o-transition: 0.3s linear;
+        -webkit-transition: 0.3s linear;
+    } 
+    .nav.active{
+        right: 0;
+        left: 0;
+    }
+    .menu { 
+        flex-direction: column; /* робимо меню у вигляді колонки */
+        padding: 30px;
+        gap: 30px;
+    }
+    .burger{
+        display: block; /* відображати */
+        width: 60px;
+        height: 40px;
+        background: url(../images/burger.svg) no-repeat center;
+       
+        transform: rotate(0deg);         /* додаємо анімацію для кнопки меню */
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        -o-transform: rotate(0deg);
+        -webkit-transform: rotate(0deg);
+
+        transition: 0.3s linear; /* linear - щоб було плавно */
+        -webkit-transition: 0.3s linear;
+        -moz-transition: 0.3s linear;
+        -ms-transition: 0.3s linear;
+        -o-transition: 0.3s linear;
+        -webkit-transition: 0.3s linear;
+}
+    .burger.active{ /* якщо пишемо без пробіла, то це означає, що правило стосується елемента, що має обидва класи, якщо з пробілом, то це правило стосується елемента другого класу, який знаходится в елементв першого класу */
+        background: url(../images/close.svg) no-repeat center;
+        
+        transform: rotate(180deg); /* додаємо анімацію для кнопки меню */
+        -webkit-transform:rotate(180deg);
+        -moz-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+        -o-transform: rotate(180deg);
+        -webkit-transform: rotate(180deg);
+    }
+}
+
+@media(max-width: 768px){
+    .header-logo {
+        width: 45px; /* задаємо розміри логотипу */
+    }
+    .header-link { /* скриваємо кнопку регістрації */
+        display: none;
+    }
+    .cart {
+        margin: 0 5px 0 20px; /* посуваємо кнопку корзини */
+    }
+    .strvice-content {
+        width: 100%;
+    }
+    .service-item {
+        /* background: #00800030; */
+        margin: 0 auto 20px;
+    }
+    .wrapper.vegetable-inner-wrapper {
+        background-size: 50%;
+    }
+    .inner-title{
+        text-align: center;
+    }
+    .customer-content {
+        width: 100%;
+    }
+    .customer-text {
+        width: 100%;
+    }
+    .customer-img {
+        display: flex;
+        justify-content: center;
+        width: 100%;   
+        height: 100%;     
+    }
+    .app {
+        padding: 0 10px 70px;
+    }
+    .app-content {
+        width: 100%;
+    }
+    .app-text {
+        width: 100%;
+    }
+    .app-title {
+        font-size: 60px;
+        line-height: 80px;
+    }
+    .footer-block {
+        width: 100%;
+    }
+    .footer-title {
+        margin: 0px 0 40px
+    }
+}
+
+@media(max-width: 590px){
+    .service-wrapper{
+        gap: 50px;
+    }
+    .service-img {
+        width: 100%;
+        height: 100%;
+        background-image: url(../images/elips-fruit.png);
+        background-position: bottom 0px center; /* перший фон */
+        background-size: auto; /* перший фон */
+     }
+}
+
+@media(max-width: 450px){
+    form.form {
+        display: none; /* скриваємо кнопку пошуку */
+    }
+    .cart {
+        margin: 0 5px 0 0px; /* посуваємо кнопку корзини */
+    }
+    .hero-title {
+         font-size: 50px; 
+         line-height: 70px;
+    }
+    .service-item {
+        padding: 40px 20px 40px 20px;
+    }
+    .service-item span:first-child, 
+    .service-item::before { /* скриваємо іконки і псевдоелемент */
+        display: none;
+    }
+    .inner-title {
+        font-size: 45px;
+        line-height: 60px;
+        text-align: center;
+    }
+    .service-img {
+        background-size: 100%;  
+    }
+    .app-title {
+        font-size: 50px;
+        line-height: 65px;
+    }
+    .footer-text {
+        width: 100%;
+    } 
+}
