@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/slick.css">
+    <link rel="stylesheet" href="css/star-rating-svg.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/media.css">
+    <title>Organic food</title>
+</head>
+
+<body>
+
+
+    <!-- <div class="wrapper"> відключив wrapper тому, що була проблема з заливкою на сторінці, переніс його далі -->
+
+<header class="header">
+    <div class="header__fixed">
+        <div class="container header-wrapper">
+            <div class="burger"></div>
+            
+            <nav class="nav">
+                <ul class="menu">
+                    <li class="menu__item">
+                        <a href="" class="menu__link">About Us</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Service</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Menu</a>
+                    </li>
+                    <li class="menu__item">
+                        <a href="" class="menu__link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+            <a href="" class="header-logo">
+                <img src="images/logo.png" alt="logo">
+            </a>
+            <div class="header-block">
+                <form action="" class="form">
+                    <input type="text" class="search" placeholder="search">
+                    <button class="btn header-btn"></button>
+                </form>
+                <a href="" class="cart"></a>
+                <a href="" class="header-link link-bg--green">Regestar Now</a>
+            </div>
+        </div>
+    </div>
+    </header>
+    <!-- ********************** End header ************************* -->
+
+    <main>
+        <!-- ********************** hero сторінка 1 ************************* -->
+        <section class="hero">
+            <div class="wrapper hero-inner-wrapper">
+                <h1 class="hero-title inner-title">Organic Fruit & Vegetables</h1>
+                <p class="herro-text inner-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                    industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                    unknown printer took a galley...</p>
+                <div class="container hero-wrapper">
+                    <figure class="hero-img">
+                        <img src="images/vegetables-fruits.png" alt="">
+                        <a href="" class="hero-link link">Order Now</a>
+                    </figure>
+                    <ul class="hero-list">
+                        <li class="hero-item users">
+                            30K
+                            <span>User Order</span>
+                        </li>
+                        <li class="hero-item starts">
+                            20K
+                            <span>Reviews(4.8)</span>
+                        </li>
+                        <li class="hero-item items">
+                            300
+                            <span>Items</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- ********************** End hero сторінка 1 ************************* -->
+
+
+        <!-- ********************** section service сторінка 2 ************************* -->
+
+        <section class="service">
+            <div class="service-wrapper container">
+                <div class="service-content">
+                    <h2 class="servce-title inner-title">Why We Are The Best?</h2>
+                    <p class="service-text inner-text">Lorem Ipsum is simply dummy text of the printing and typesetting
+                        industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an
+                        unknown printer took a galley...</p>
+                    <ul class="service-list">
+                        <li class="service-item">
+                            <span class="icon-delivery"></span>
+                            <span class="service-item__title">Fasted delivery Service</span>
+                            <span class="service-item__text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry.</span>
+                        </li>
+                        <li class="service-item">
+                            <span class="icon-order"></span>
+                            <span class="service-item__title">Online order Service</span>
+                            <span class="service-item__text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry.</span>
+                        </li>
+                        <li class="service-item">
+                            <span class="icon-time"></span>
+                            <span class="service-item__title">24/8 Service</span>
+                            <span class="service-item__text">Lorem Ipsum is simply dummy text of the printing and
+                                typesetting industry.</span>
+                        </li>
+                    </ul>
+
+                    <!-- додаємо стрілочку знизу -->
+                    <a href="#" class="service-link"></a>
+
+                </div>
+                <div class="service-img">
+                    <figure><img src="images/man-delivery.png" alt="man-delivery"></figure>
+                </div>
+            </div>
+        </section>
+
+        <!-- ********************** End section service сторінка 2 ************************* -->
+
+        <!-- ********************** section Vegitable сторінка 3 ************************* -->
+        <!-- спочатку робимо каркас
+            у нас є секція vegitables і всередині неї є бекграунд, 
+            у нас є контейнер 
+            є тег figure і vegitable content, всередині якого знаходиться посилання, 
+            і щоб ці елементи не розсипались при зміні розміру екрану
+            ми їх обернемо ще в один div з класом wrapper, 
+            який дорівнює ширині макету, тобто 1440 пікселів
+            ми цьому класу не маємо права долавати додаткові правила
+            він виконує роль каркаса, за який наші елементи не будуть розповзатись
+            при зміні екрану, наприклад, більше 2000 пікселів
+            для цього для wrapper ми додамо ще один клас
+            який ми будемо використовувати дл ятого, щоб відобразити всередині бекграунд (фото справа0)
+            який має бути завжди в правому нижньому куті -->
+
+            <!-- має бути така структура: -->
+
+<!-- <section class="vegetable">
+    <div class="wrapper vegetable-inner-wrapper">
+        <div class="vegetable-wrapper container">
+            <figure class="vegetable-img"><img src="" alt=""></figure>
+            <div class="vegetable-contant">
+                <h2 class="vegetable-title inner-title"></h2>
+                <p class="inner-text vegetable-text"></p>
+                <a href="" class="vegetable-link link">Explor Now</a>
+            </div>
+        </div>
+    </div>
+</section> -->
+
+
+<section class="vegetable">
+    <div class="wrapper vegetable-inner-wrapper">
+        <div class="vegetable-wrapper container">
+            <figure class="vegetable-img"><img src="images/vegetable.png" alt=""></figure>
+            <div class="vegetable-contant">
+                <h2 class="vegetable-title inner-title">Explor Our Special Items</h2>
+                <p class="inner-text vegetable-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer...</p>
+                <a href="" class="vegetable-link link">Explor Now</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+        <!-- ********************** End section Vegitable сторінка 3 ************************* -->
+ <!-- ********************** section Customers сторінка 4 ************************* -->
+
+ <!-- 
+    тут у нас буде ретинг зірок
+    використаємо слайдер (slick slider)
+    додамо анімацію картинці
+
+    у нас є блок, в якому є 2 невеликі блоки:
+        лівий - контент
+        правий - фігура, всередині якого є картинка, яка має бекграунд
+    також, присутні кнопки навігації
+    присутній рейтинг зірок, який ми не будемо верстати, а прикрутимо спеціальну маленьку бібліотеку, яку можна буде використовувати в іших проектах
+    секція у нас обмежена, тому ми маємо огорнути її в wrapper. при прогортанні слайда вона повинна повністю мінятись.
+
+    створюємо секцію customers
+    
+    всередині створюємо wrapper (це наша обгортка, щоб макет, а конкретно ця секція, не розвалилася)
+    
+    далі створюємо container, це клас, який дозволяє нам утримувати елементи в центрі макету і додамо йому клас customers-slider, тому, що це єдиний елемент, який при прогортанні має повністю змінюватись
+    
+    всередині у нас буде один слайд (використаємо slick slider)
+            коли ми підключаємо slick slider, то він автоматично задає цьому блоку (слайду) 
+            display: inline-block;
+            width: 100%; (ширина 100%) 
+            і ми не можемо на це вплинути і це викликає питання при адаптивній верстці
+
+    тому, всередині ми створимо ще один div - customer.wrapper, якому будемо задавати усі правила - display: flex, розміщення елементів та інше
+    при цьому, на його батька впливати не буде
+
+    пишемо
+        section.customers>.wrapper>.container.customers-slider>.customer-block>.customer-wrapper>.customer-content>h2.inner-title.customer-title+p.inner-text.cutomer-text+span.customer-name+.customer-starts^figure.customer-img>img
+    отримуємо
+        <section class="customers">
+    <div class="wrapper">
+        <div class="container customers-slider">
+            <div class="customer-block">
+                <div class="customer-wrapper">
+                    <div class="customer-content">
+                        <h2 class="inner-title customer-title"></h2>
+                        <p class="inner-text cutomer-text"></p>
+                        <span class="customer-name"></span>
+                        <div class="customer-starts"></div>
+                    </div>
+                    <figure class="customer-img"><img src="" alt=""></figure>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+display: inline-block; - це CSS властивість, яка використовується для задання відображення елемента як блоку, але зберігає його властивості блокового елемента всередині лінійного потоку.
+        display: Вказує, як елемент повинен відображатися. У цьому випадку - як блок з лінійною конфігурацією.
+        inline-block: Зазначає, що елемент повинен відображатися як блок, але зберігати свої властивості всередині лінійного потоку. Елементи inline-block розташовуються в одному рядку, але вони можуть мати ширину та висоту, як блокові елементи.
+display: flex; - це CSS властивість, яка використовується для створення контейнера Flexbox. Flexbox - це модель розташування елементів в контейнері, яка дозволяє легко організовувати елементи вдоль одного або двох напрямків - головного та поперечного (main axis та cross axis).
+        Головна Вісь (Main Axis): Визначає напрямок, вздовж якого розташовуються гнучкі елементи. Його можна встановити як "row" (горизонтально), "column" (вертикально) або інше.
+        Поперечна Вісь (Cross Axis): Це вздовжна вісь, перпендикулярна головній вісі.
+            Елементи-Діти Flex-Контейнера: Вони автоматично стають гнучкими елементами і можуть використовувати властивості, які контролюють розташування, розмір і порядок елементів.       
+-->
+
+<section class="customers">
+    <div class="wrapper">
+        <div class="container customers-slider">
+
+            <div class="customer-block">
+                <div class="customer-wrapper">
+                    <div class="customer-content">
+                        <h2 class="inner-title customer-title">What Our Customers About Us saying</h2>
+                        <p class="inner-text cutomer-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularis</p>
+                        <span class="customer-name">Ahmed Hridoy</span>
+                        <div class="customer-starts" data-rating="4.5"></div> <!-- вказуємо, який у нас буде відображатись кейтинг по замовчуванню -->
+                    </div>
+                    <figure class="customer-img"><img src="images/bohemian-man-with.png" alt="bohemian-man"></figure>
+                </div>
+            </div>
+
+            <div class="customer-block">
+                <div class="customer-wrapper">
+                    <div class="customer-content">
+                        <h2 class="inner-title customer-title">What Our Customers About Us saying</h2>
+                        <p class="inner-text cutomer-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularis</p>
+                        <span class="customer-name">Ahmed Hridoy</span>
+                        <div class="customer-starts" data-rating="4.5"></div> <!-- вказуємо, який у нас буде відображатись кейтинг по замовчуванню -->
+                    </div>
+                    <figure class="customer-img"><img src="images/bohemian-man-with.png" alt="bohemian-man"></figure>
+                </div>
+            </div>
+
+            <div class="customer-block">
+                <div class="customer-wrapper">
+                    <div class="customer-content">
+                        <h2 class="inner-title customer-title">What Our Customers About Us saying</h2>
+                        <p class="inner-text cutomer-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularis</p>
+                        <span class="customer-name">Ahmed Hridoy</span>
+                        <div class="customer-starts" data-rating="4.5"></div> <!-- вказуємо, який у нас буде відображатись кейтинг по замовчуванню -->
+                    </div>
+                    <figure class="customer-img"><img src="images/bohemian-man-with.png" alt="bohemian-man"></figure>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+ <!-- ********************** End section Customers сторінка 4 ************************* -->
+ 
+ <!-- ********************** Section App сторінка 5 ************************* -->
+    <!-- Цей блок у нас менший та має відступи по сторонам. Блок внизу має картинки, але ми їх будемо верстати.
+            
+        section.app>.container.app--wrapper>figure.app-img>img^.app-content>span.app-subtitle+h2.inner-title+p.inner-text.app-text+.app-block>a.app-link*2>span
+
+            всередині секції App у нас буде 
+                контейнер з додатковим классом app-wrapper якому ми задамо відступи справа і зліва та правило flex
+                    всеревині у нас буде figure з класом app-img
+                        тут буде знаходитись картинка img
+                    та div app-content
+                        всередині якого буде span з класом app-subtitle (кнопка Download App)
+                        а також заголовок h2 з класом inner-title
+                        та параграф p з класами inner-text та app-text (тому, що ми будемо ставити відступи зверху і знизу)
+                        також, додамо два елементи з посиланнями, яким ми задамо кожному свій клас
+
+<section class="app">
+    <div class="container app--wrapper">
+        <figure class="app-img"><img src="" alt=""></figure>
+        <div class="app-content">
+            <span class="app-subtitle"></span>
+            <h2 class="inner-title"></h2>
+            <p class="inner-text app-text"></p>
+            <div class="app-block">
+                <a href="" class="app-link app-store"></a>
+                <a href="" class="app-link google-play"></a>
+            </div>
+        </div>
+    </div>
+</section>
+         -->
+
+<section class="app">
+    <div class="container app-wrapper">
+        <figure class="app-img"><img src="images/mobile.png" alt="mobile app"></figure>
+        <div class="app-content">
+            <span class="app-subtitle">Download App</span>
+            <h2 class="inner-title">Simple Way To Order Your Organic Fruit </h2>
+            <p class="inner-text app-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer...</p>
+            <div class="app-block">
+                <a href="" class="app-link app-store"><span>Download on the</span>App Store</a>
+                <a href="" class="app-link google-play"><span>get it  on</span>Google Play</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- ********************** End section App сторінка 5 ************************* -->
+ <!-- ********************** Section Footer сторінка 6 ************************* -->
+ <!-- 
+    footer.footer>.container.footer-wrapper>.footer-block*4 
+    span.footer-logo>img^p.inner-text.footer-text
+    span.footer-title
+    ul.footer-menu>li.footer-item*3>a.footer-link
+    span.footer-email
+    ul.footer-social>li*3>a>img
+
+ <footer class="footer">
+    <div class="container footer-wrapper">
+        <div class="footer-block">
+            <span class="footer-logo"><img src="" alt=""></span>
+            <p class="inner-text footer-text"></p>
+        </div>
+        <div class="footer-block">
+            <span class="footer-title"></span>
+            <ul class="footer-menu">
+                <li class="footer-item"><a href="" class="footer-link"></a></li>
+                <li class="footer-item"><a href="" class="footer-link"></a></li>
+                <li class="footer-item"><a href="" class="footer-link"></a></li>
+            </ul>
+        </div>
+        <div class="footer-block">
+            <span class="footer-title"></span>
+            <ul class="footer-menu">
+                <li class="footer-item"><a href="" class="footer-link"></a></li>
+                <li class="footer-item"><a href="" class="footer-link"></a></li>
+                <li class="footer-item"><a href="" class="footer-link"></a></li>
+            </ul>
+        </div>
+        <div class="footer-block">
+            <span class="footer-title"></span>
+            <span class="footer-email"></span>
+            <ul class="footer-social">
+                <li><a href=""><img src="" alt=""></a></li>
+                <li><a href=""><img src="" alt=""></a></li>
+                <li><a href=""><img src="" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+ </footer>
+
+
+-->
+
+
+
+
+ <footer class="footer">
+    <div class="container footer-wrapper">
+        <div class="footer-block">
+            <span class="footer-logo"><img src="images/logo-footer.png" alt=""></span>
+            <p class="inner-text footer-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer...</p>
+        </div>
+        <div class="footer-block">
+            <span class="footer-title">Navigation</span>
+            <ul class="footer-menu">
+                <li class="footer-item"><a href="" class="footer-link">About Us</a></li>
+                <li class="footer-item"><a href="" class="footer-link">Service</a></li>
+                <li class="footer-item"><a href="" class="footer-link">Menu</a></li>
+            </ul>
+        </div>
+        <div class="footer-block">
+            <span class="footer-title">Resources</span>
+            <ul class="footer-menu">
+                <li class="footer-item"><a href="" class="footer-link">Reviews</a></li>
+                <li class="footer-item"><a href="" class="footer-link">Blog</a></li>
+                <li class="footer-item"><a href="" class="footer-link">Update News</a></li>
+            </ul>
+        </div>
+        <div class="footer-block">
+            <span class="footer-title">Contact Us</span>
+           
+            <ul class="footer-adress">
+                <li class="footer-item"><span class="footer-link">Tel:&nbsp;&nbsp;&nbsp;&nbsp;</span><a class="footer-link footer-contact" href="tel:+380638464053">+38 (063) 846 40 53</a></li>
+                <li class="footer-item"><span class="footer-link">Email:&nbsp;</span><a class="footer-link footer-contact" href="mailto:valerahajko@ukr.net">valerahajko@ukr.net</a></li>
+            </ul>
+
+            <ul class="footer-social">
+                <li><a href="#" onclick="openTelegram()"><img class="footer-link" src="images/telegram.svg" alt=""></a></li>
+                <li><a href="#" onclick="openViber()"><img class="footer-link" src="images/viber.svg" alt=""></a></li>
+                <!-- <li><a href=""><img src="images/facebook.svg" alt=""></a></li> -->
+                <!-- <li><a href=""><img src="images/twitter.svg" alt=""></a></li> -->
+                <li><a href="#" onclick="openInstagram()"><img class="footer-link" src="images/instagram.svg" alt=""></a></li>
+            </ul>
+        </div>
+    </div>
+ </footer>
+  <!-- ********************** End Section Footer сторінка 6 ************************* -->
+
+
+    </main>
+
+    <!-- </div> відключив wrapper тому, що була проблема з заливкою на сторінці, переніс його далі-->
+
+<script src="js/jquery-3.7.1.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/jquery.star-rating-svg.min.js"></script>
+<script src="js/main.js"></script>
+<script src="js/social.js"></script>
+
+
+
+
+
+
+</body>
+
+</html>
